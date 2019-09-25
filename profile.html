@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/styleprofile.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+    <script type="text/javascript" src="resources/js/jquery-1.10.2.min.js"></script>
+    <title>Aman's</title>
+
+
+</head>
+
+<body>
+
+    <div class="top">
+        <ul>
+            <li><img src="resources/css/img/logo3%20white.png" class="logo"></li>
+            <li><a>&nbsp;</a></li>
+            <li class="side"><a href="index1.html">Home</a></li>
+            <li class="side"><a href="#">Contact us</a></li>
+            <li class="side"><a href="#">About us</a></li>
+        </ul>
+    </div>
+    <div class="pro">
+        <div id="w">
+            <div id="content" class="clearfix">
+                <div id="userphoto"><img src="resources/img/avatar.png" alt="default avatar"></div>
+                <h1>Profile Page</h1>
+
+                <nav id="profiletabs">
+                    <ul class="clearfix">
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#minimeal">Mini-Meal</a></li>
+                        <li><a href="#alakarte">Ala-Karte</a></li>
+                        <li><a href="#package">Package.</a></li>
+                    </ul>
+                </nav>
+
+
+                <!--
+                <section id="logout" class="hidden log">
+                    <a href="index.html">Click To Logout</a>
+                </section>
+-->
+
+
+                <section id="minimeal" class="hidden">
+                    <p>Your Choice:</p>
+                    
+                </section>
+                
+                <section id="alakarte" class="hidden">
+                    <p>Your Choice:</p>
+                    
+                </section>
+                
+                <section id="package" class="hidden">
+                    <p>Your Choice:</p>
+                    
+                </section>
+        
+
+                <section id="profile" class="hidden">
+                    <p>Edit your user settings:</p>
+
+                    <p class="setting"><span>Email Address</span> lolno@gmail.com</p>
+
+                    <p class="setting"><span>Password<input type="image" src="resources/img/edit.png" alt="edit" width="15" height="15" class="open-button" onclick="openForm()"></span> None</p>
+                    <p class="setting"><span>Phone No.<input type="image" src="resources/img/edit.png" alt="edit" width="15" height="15" class="open-button" onclick="openForm3()"></span> None</p>
+                    <p class="setting"><span>Log-out</span> l<a href="index.html">og-out</a>  </p>
+
+                    <div class="form-popup" id="myForm">
+                        <form class="form-container">
+                            <h1>Enter Your Mail</h1>
+                            <input type="email" placeholder="Email" name="email" required>
+                            <div class="btnn">
+                                <button type="submit" class="btn" onclick="openForm1(); closeForm()">Next</button>
+                                <button type="button" class="btn cancel" onclick="closeForm()">Close</button></div>
+                        </form>
+                    </div>
+                    <div class="form-popup" id="myForm1">
+                        <form class="form-container">
+                            <h1>Question</h1>
+                            
+                            <select class="drop">
+                                <option value="dog">Your Dog's Name ?</option>
+                                <option value="colour">Favourite Colour ?</option>
+                                <option value="subject">Favourite Subject in School ?</option>
+                                <option value="bla">bla bla bla</option>
+                            </select>
+                            
+                            <input type="text" placeholder="Answer" name="ans" required>
+
+                            <div class="btnn">
+                                <button type="submit" class="btn" onclick="openForm2(); closeForm1()">Next</button>
+                                <button type="button" class="btn cancel" onclick="closeForm1()">Close</button></div>
+                        </form>
+                    </div>
+                    <div class="form-popup" id="myForm2">
+                        <form class="form-container">
+                            <h1>Update Password</h1>
+
+                            <label for="email"><b>New Password</b></label>
+                            <input type="Password" placeholder="Enter New Password" name="email" required>
+
+                            <label for="email"><b>Re-enter Password</b></label>
+                            <input type="Password" placeholder="Enter New Password" name="email" required>
+                            <div class="btnn">
+                                <button type="submit" class="btn">Update</button>
+                                <button type="button" class="btn cancel" onclick="closeForm2()">Close</button></div>
+                        </form>
+                    </div>
+                    
+                    <div class="form-popup" id="myForm3">
+                        <form class="form-container">
+                            <h1>Enter Your Phone no.</h1>
+                            <input type="text" placeholder="Answer" name="phone">
+                            <div class="btnn">
+                                <button type="submit" class="btn" onclick=" closeForm3()">Submit</button>
+                                <button type="button" class="btn cancel" onclick="closeForm3()">Close</button></div>
+                        </form>
+                    </div>
+                </section>
+            </div><!-- @end #content -->
+        </div><!-- @end #w -->
+    </div>
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script>
+        function openForm1() {
+            document.getElementById("myForm1").style.display = "block";
+        }
+
+        function closeForm1() {
+            document.getElementById("myForm1").style.display = "none";
+        }
+    </script>
+    <script>
+        function openForm2() {
+            document.getElementById("myForm2").style.display = "block";
+        }
+
+        function closeForm2() {
+            document.getElementById("myForm2").style.display = "none";
+        }
+    </script>
+    <script>
+        function openForm3() {
+            document.getElementById("myForm3").style.display = "block";
+        }
+
+        function closeForm3() {
+            document.getElementById("myForm3").style.display = "none";
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $('#profiletabs ul li a').on('click', function(e) {
+                e.preventDefault();
+                var newcontent = $(this).attr('href');
+
+                $('#profiletabs ul li a').removeClass('sel');
+                $(this).addClass('sel');
+
+                $('#content section').each(function() {
+                    if (!$(this).hasClass('hidden')) {
+                        $(this).addClass('hidden');
+                    }
+                });
+
+                $(newcontent).removeClass('hidden');
+            });
+        });
+    </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+
+</html>

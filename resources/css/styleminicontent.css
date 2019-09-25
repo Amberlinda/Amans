@@ -1,0 +1,492 @@
+/*-------------------------------
+/*basic color : #ff418a
+---------------------------------*/
+
+
+/*
+BASIC CODE
+
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif, 'Arial';
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+/*-------------------------------
+/*REUSABLE CODE
+---------------------------------*/
+.row {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ' ';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*-------------------------------
+/*HEADERS
+---------------------------------*/
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 240%;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    color: #fff;
+}
+
+h1:after {
+    display: block;
+    width: 125px;
+    background-color: #ff418a;
+    content: " ";
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+h3 {
+    margin-top: 20px;
+    font-size: 90%;
+    font-weight: 400i;
+}
+
+h3:before {
+    content: " ";
+    height: 1px;
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/*-------------------------------
+/*IMAGE-SECTION
+---------------------------------*/
+
+
+.section-meals {
+    width: 100%;
+    text-align: center;
+    height: 100vh;
+}
+
+.image-section {
+    position: relative;
+    width: 75%;
+    float: left;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)), url(img/image-section-back.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.section-1 {
+    width: 75%;
+    float: left;
+    margin: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.79), rgba(0, 0, 0, 0.79)), url(img/image-section-back.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+.welcome-text {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.welcome-text i {
+    display: block;
+    color: #fff;
+    font-size: 150%;
+    position: absolute;
+    top: -50%;
+}
+
+.welcome-text blockquote {
+    font-style: italic;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.welcome-text span {
+    position: absolute;
+    left: 35%;
+    font-size: 120%;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.welcome-text span i {
+    top: 200%;
+    left: 50%;
+}
+
+
+.meals-showcase,
+.non-veg-meals-showcase {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    display: none;
+}
+
+
+.meals-showcase > div,
+.non-veg-meals-showcase > div {
+    list-style: none;
+    width: 30%;
+    height: 220px;
+    margin: 0 10%;
+    margin-top: 50px;
+    border: 1px solid #000;
+    position: relative;
+    float: left;
+}
+
+
+
+
+
+.meals-showcase > div:hover .overlay,
+.non-veg-meals-showcase > div:hover .overlay {
+    opacity: 1;
+}
+
+
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: 0.5s;
+    position: relative;
+}
+
+
+.btn-show:link,
+.btn-show:visited {
+    border: 1px solid #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: box-shadow 0.2s;
+}
+
+.btn-show:hover {
+    box-shadow: 0 0 10px #fff;
+}
+
+
+.icon{
+   position: absolute;
+    color: #fff;
+    top: 0;
+    right: 0;
+    font-size: 150%;
+    display: block;
+    transition: 0.2s;
+    display: none;
+}
+
+.icon:hover{
+    font-size: 180%;
+    color: #bebebe;
+}
+
+
+.overlay {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.79);
+    transform: translate(-50%, -50%);
+    color: #fff;
+    transition: 0.2s linear;
+
+}
+
+.overlay-select{
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(16, 16, 16, 0.79);
+    transform: translate(-50%, -50%);
+    color: #000;
+}
+
+.info:link,
+.info:visited {
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+}
+
+/*-------------------------------
+/*FORMS
+---------------------------------*/
+
+
+.form {
+    width: 25%;
+    float: right;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    left: 75%;
+}
+
+.meals-form {
+    text-align: center;
+    width: 100%;
+}
+
+.line{
+    width: 2px;
+    background-color: #fff;
+    content: " ";
+    display: inline-block;
+    height: 20px;
+    margin:0 10px;
+}
+
+.form-elements {
+    width: 100%;
+    text-transform: uppercase;
+}
+
+label{
+    font-size: 80%;
+}
+
+
+
+
+*:focus {
+    outline: none;
+}
+
+input[type=text],
+input[type=number] {
+    width: 150px;
+    margin-top: 8px;
+    border: none;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+input[type=submit],
+input[type=reset] {
+    width: 100px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border: none;
+    text-transform: uppercase;
+    font-size: 80%;
+    margin: 10px 10px;
+}
+
+input[type=submit] {
+    background-color: #ff418a;
+    color: #fff;
+    transition: 0.5s;
+    text-align: center;
+    text-transform: uppercase;
+    display: none;
+
+}
+
+input[type=submit]:hover {
+    background-color: #f41b6e;
+}
+
+input[type=reset] {
+    background-color: #fff;
+    transition: 0.5s;
+
+}
+
+input[type=reset]:hover {
+    background-color: #ff418a;
+    color: #fff;
+}
+
+.btn-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+
+.btn-section li {
+    width: 35%;
+    float: left;
+    margin-left: 35px;
+    list-style: none;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.btn-section li img {
+    width: 100%;
+    border: 1px solid #000;
+}
+
+/*-------------------------------
+/*BUTTONS
+---------------------------------*/
+.btn:link,
+.btn:visited {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    text-decoration: none;
+    margin: 0 20px;
+    color: #fff;
+    font-style: italic;
+}
+
+.js--veg-btn:link,
+.js--veg-btn:visited,
+.js--non-veg-btn:link,
+.js--non-veg-btn:visited {
+    margin: 0 10px;
+}
+
+.btn-overlay {
+    position: absolute;
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.2s linear;
+    font-size: 80%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 115%;
+}
+
+.btn-section li:hover .btn-overlay {
+    opacity: 1;
+}
+
+
+/*
+IMAGE SECTION ANIMATION
+*/
+.js--image-section {
+    transition: 0.1s;
+}
+
+
+.overlay-1{
+    opacity: 0;
+}
+
+/*-------------------------------
+/*MAIN NAVIGATION
+---------------------------------*/
+
+nav {
+    width: 100%;
+    background-color: #333;
+    width: 75%;
+    position: fixed;
+    height: 65px;
+    z-index: 1;
+}
+
+.logo {
+    float: left;
+    width: 6%;
+    margin: 6px 6px;
+}
+
+.main-nav {
+    float: left;
+}
+
+.main-nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 21px;
+
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    transition: 0.2s;
+    font-size: 80%;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #ff418a;
+
+}
+
+.veg-name,.nonveg-name{
+    display: none;
+}
+
+

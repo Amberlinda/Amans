@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body {
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  width: 15%;
+  background-color: #333;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.logo{
+    height: 155px;
+    width: auto;
+    float: left;
+    margin-top: 0px;
+}
+li a {
+  display: block;
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+.side a:link,
+.side a:visited{
+    padding: 12px ;
+    color: #fff;
+    text-decoration: none;
+    font-size: 80%;
+}
+.side a:hover,
+.side a:active{
+    border-left: 3px solid #ff418a;
+    -webkit-transition: border-left 0.3s;
+    transition: border-left 0.3s;
+}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  -webkit-box-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    -webkit-box-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+    .logo{
+    height: 70px;
+    width: auto;
+}
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    -webkit-box-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+  .logo{
+    height: 70px;
+    width: auto;
+}
+}
+h1{
+    text-align: center;
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-top: auto;
+    letter-spacing: 2px;
+    padding-top: 15px;
+}
+
+h1:after{
+    display: block;
+    height: 2px;
+    background-color: #ff418a;
+    content: " ";
+    width: 100px;
+    margin: 0 auto;
+}
